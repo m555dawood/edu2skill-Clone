@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tailwind.css" />
+    <title>edu2skill | Abo Bakar</title>
+    <link rel="icon" href="../images/logo.png" />
+  </head>
+
+  <body class="bg-white">
+
+    <nav class="bg-gray-900 px-4 py-3 relative">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="text-white text-lg font-semibold"
+          >edu2skill</a
+        >
+
+        <button
+          id="menu-toggle"
+          class="text-white md:hidden focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <div class="hidden md:flex md:items-center">
+          <a
+            href="courses.html"
+            class="text-white text-lg font-semibold hover:text-gray-300"
+            >Courses</a
+          >
+        </div>
+      </div>
+
+      <div
+        id="menu"
+        class="absolute left-4 mt-2 hidden md:hidden bg-gray-800 rounded shadow-md w-40 z-50"
+      >
+        <a
+          href="courses.html"
+          class="block px-4 py-2 text-white text-lg hover:bg-gray-700 rounded"
+          >Courses</a
+        >
+      </div>
+    </nav>
+
+    <section style="background-color: #dff5e1" class="py-8 px-10">
+      <h1 class="text-5xl font-bold text-gray-800 font-serif text-center">
+        Courses
+      </h1>
+      <p class="mt-6 text-2xl text-gray-800 font-serif max-w-4xl mx-auto text-center">
+        Unlock the world of knowledge with our comprehensive tutorials designed by edu2skill
+        platform to enhance your computer science, IT, and software engineering skills. Whether
+        you’re a beginner or an advanced learner, our step-by-step guides will help you master key
+        concepts with ease.
+      </p>
+      <p class="mt-4 text-2xl text-gray-800 font-serif max-w-3xl mx-auto text-left">
+        Explore a wide range of courses, including:
+      </p>
+    </section>
+
+    <section style="background-color: #e9f9f1" class="py-16 px-10">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10">
+        <div class="text-center md:text-left space-y-6 md:mr-4">
+          <h2 class="text-4xl font-bold text-gray-800 font-serif">Course 1;</h2>
+          <h3 class="text-3xl mt-4 text-gray-900 font-serif">
+            HyperText Markup <br />Language (HTML)
+          </h3>
+          <a
+            href="html_lesson.html"
+            class="inline-block mt-4 px-5 py-2 border border-black text-black font-semibold hover:bg-black hover:text-white transition"
+          >
+            Start Learning
+          </a>
+        </div>
+        <div class="flex justify-center md:ml-48">
+          <a href="html_lesson.html"
+            ><img src="../images/html_icon.webp" alt="HTML Icon" class="w-48 h-44"
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: #d7f7e7" class="py-16 px-10">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10">
+        <div class="flex justify-center md:mr-4">
+          <a href="css_lesson.html">
+            <img src="../images/css_icon.webp" alt="CSS Icon" class="w-48 h-44" />
+          </a>
+        </div>
+        <div class="text-center md:text-left space-y-6 md:ml-48">
+          <h2 class="text-4xl font-bold text-gray-800 font-serif">Course 2;</h2>
+          <h3 class="text-3xl mt-4 text-gray-900 font-serif">
+            Cascading Style Sheets <br />(CSS)
+          </h3>
+          <a
+            href="css_lesson.html"
+            class="inline-block mt-4 px-5 py-2 border border-black text-black font-semibold hover:bg-black hover:text-white transition"
+          >
+            Start Learning
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: #e9f9f1" class="py-16 px-10">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10">
+        <div class="text-center md:text-left space-y-6 md:mr-4">
+          <h2 class="text-4xl font-bold text-gray-800 font-serif">Course 3;</h2>
+          <h3 class="text-3xl mt-4 text-gray-900 font-serif">Tailwind CSS</h3>
+          <a
+            href="tailwind_lesson.html"
+            class="inline-block mt-4 px-5 py-2 border border-black text-black font-semibold hover:bg-black hover:text-white transition"
+          >
+            Start Learning
+          </a>
+        </div>
+        <div class="flex justify-center md:ml-48">
+          <a href="tailwind_lesson.html">
+            <img src="../images/tailwindcss_icon.webp" alt="Tailwind Icon" class="w-48 h-44" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: #d7f7e7" class="py-16 px-10">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10">
+        <div class="flex justify-center md:mr-4">
+          <a href="js_lesson.html">
+            <img src="../images/js_icon.webp" alt="JavaScript Icon" class="w-48 h-44" />
+          </a>
+        </div>
+        <div class="text-center md:text-left space-y-6 md:ml-48">
+          <h2 class="text-4xl font-bold text-gray-800 font-serif">Course 4;</h2>
+          <h3 class="text-3xl mt-4 text-gray-900 font-serif">JavaScript</h3>
+          <a
+            href="js_lesson.html"
+            class="inline-block mt-4 px-5 py-2 border border-black text-black font-semibold hover:bg-black hover:text-white transition"
+          >
+            Start Learning
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: #e9f9f1" class="py-16 px-10">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10">
+        <div class="text-center md:text-left space-y-6 md:mr-4">
+          <h2 class="text-4xl font-bold text-gray-800 font-serif">Course 5;</h2>
+          <h3 class="text-3xl mt-4 text-gray-900 font-serif">ReactJS</h3>
+          <a
+            href="#"
+            class="inline-block mt-4 px-5 py-2 border border-black text-black font-semibold hover:bg-black hover:text-white transition"
+          >
+            Start Learning
+          </a>
+        </div>
+        <div class="flex justify-center md:ml-48">
+          <a href="#">
+            <img src="../images/reactjs.webp" alt="ReactJS Icon" class="w-48 h-44" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <!-- For the Menu button  -->
+  <script>
+    const toggleBtn = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggleBtn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+  
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tailwind.css" />
+    <title>edu2skill | Abo Bakar</title>
+    <link rel="icon" href="../images/logo.png " />
+  </head>
+  <body>
+    <nav class="bg-gray-900 px-4 py-3 relative">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="text-white text-lg font-semibold"
+          >edu2skill</a
+        >
+
+        <button
+          id="menu-toggle"
+          class="text-white md:hidden focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <div class="hidden md:flex md:items-center">
+          <a
+            href="courses.html"
+            class="text-white text-lg font-semibold hover:text-gray-300"
+            >Courses</a
+          >
+        </div>
+      </div>
+
+      <div
+        id="menu"
+        class="absolute left-4 mt-2 hidden md:hidden bg-gray-800 rounded shadow-md w-40 z-50"
+      >
+        <a
+          href="courses.html"
+          class="block px-4 py-2 text-white text-lg hover:bg-gray-700 rounded"
+          >Courses</a
+        >
+      </div>
+    </nav>
+
+    <section class="bg-green-100 py-8">
+      <h1
+        class="text-3xl md:text-5xl font-bold text-gray-800 font-serif text-center"
+      >
+        Empowering your Career through
+      </h1>
+      <h1
+        class="text-3xl md:text-5xl font-bold text-gray-800 font-serif text-center"
+      >
+        skill Development
+      </h1>
+
+      <div
+        class="flex flex-col md:flex-row justify-between items-center mt-4 px-4 md:px-10 lg:px-40"
+      >
+        <div>
+          <img src="../images/edu.png" alt="Edu Logo" style="height: 50px" />
+        </div>
+        <div class="flex items-center mt-4 md:mt-0">
+          <a href="https://github.com/" class="mr-4">
+            <img
+              src="../images/git-removebg-preview.png"
+              style="height: 30px"
+            />
+          </a>
+          <a href="https://www.youtube.com/" class="mr-4">
+            <img
+              src="../images/youtube-removebg-preview.png"
+              style="height: 35px"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-cover bg-fixed bg-center"
+      style="
+        background-image: url('../images/poster.png');
+        background-blend-mode: multiply;
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 90vh;
+      "
+    >
+      <div
+        class="flex flex-col justify-center items-center text-center text-white h-full px-4"
+      >
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
+          Your Gateway to IT &
+        </h1>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          Programming Mastery
+        </h1>
+        <p class="text-base md:text-lg leading-relaxed mb-8 max-w-4xl">
+          Are you ready to enhance your IT and programming skills? At edu2skill,
+          we offer comprehensive tutorials to help you learn and grow. Whether
+          you’re a beginner or an experienced developer, our tutorials provide
+          step-by-step guidance to make learning easy and efficient.
+        </p>
+        <button
+          class="bg-black text-indigo-600 font-semibold py-3 px-6 rounded hover:bg-indigo-100 border border-white"
+        >
+          Start Learning
+        </button>
+      </div>
+    </section>
+
+    <section class="bg-green-100 py-20">
+      <h1
+        class="text-3xl md:text-4xl font-bold text-gray-800 mb-10 text-center md:text-left px-4 md:px-10 lg:px-40"
+      >
+        Easy-to-Follow Tutorials
+      </h1>
+      <div
+        class="flex flex-col md:flex-row items-center px-4 md:px-10 lg:px-40"
+      >
+        <div class="w-full md:w-1/2 md:mr-8">
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
+            Our Tutorials are designed to simplify learning, making complex
+            topics approachable for beginners and professionals alike. With
+            step-by-step explanations, clear examples, and practical exercises,
+            you’ll quickly grasp key concepts.
+          </p>
+          <button
+            class="bg-black text-white font-semibold py-3 px-6 rounded hover:bg-indigo-600 border border-white"
+          >
+            <a href="courses.html">Start Learning</a>
+          </button>
+        </div>
+        <img
+          src="../images/1l.png"
+          alt="Tutorial Image"
+          class="w-full md:w-1/2 rounded-lg shadow-md"
+        />
+      </div>
+
+      <h1
+        class="text-3xl md:text-4xl font-bold text-gray-800 mb-10 mt-24 text-center md:text-left px-4 md:px-10 lg:px-40"
+      >
+        Project-Based Learning
+      </h1>
+      <div
+        class="flex flex-col md:flex-row items-center px-4 md:px-10 lg:px-40"
+      >
+        <img
+          src="../images/2l.png"
+          alt="Project Image"
+          class="w-full md:w-1/2 rounded-lg shadow-md md:mr-8"
+        />
+        <div class="w-full md:w-1/2">
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
+            Learn by doing with projects that reinforce concepts and improve
+            your portfolio. From beginner to advanced projects, get hands-on
+            experience that builds your confidence and skillset.
+          </p>
+          <button
+            class="bg-black text-white font-semibold py-3 px-6 rounded hover:bg-indigo-600 border border-white"
+          >
+            <a href="project_l.html">Start Learning</a>
+          </button>
+        </div>
+      </div>
+
+      <h1
+        class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 mt-24 text-center md:text-left px-4 md:px-10 lg:px-40"
+      >
+        Ideas for more Projects to
+      </h1>
+      <h1
+        class="text-3xl md:text-4xl font-bold text-gray-800 mb-10 text-center md:text-left px-4 md:px-10 lg:px-40"
+      >
+        Sharpen Your Skills
+      </h1>
+      <div
+        class="flex flex-col md:flex-row items-center px-4 md:px-10 lg:px-40"
+      >
+        <div class="w-full md:w-1/2 md:mr-8">
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
+            Explore real-world project ideas to enhance your development skills.
+            Whether you're building simple tools or full applications, these
+            projects help apply what you’ve learned.
+          </p>
+          <button
+            class="bg-black text-white font-semibold py-3 px-6 rounded hover:bg-indigo-600 border border-white"
+          >
+            <a href="project_l.html">Explore More</a>
+          </button>
+        </div>
+        <img
+          src="../images/3l.png"
+          alt="Project Ideas"
+          class="w-full md:w-1/2 rounded-lg shadow-md"
+        />
+      </div>
+    </section>
+
+    <section class="bg-gray-900 py-20 text-white text-center">
+      <h4 class="font-serif text-2xl">Writer</h4>
+      <h1 class="font-serif text-5xl mb-6">Abo Bakar</h1>
+      <div class="flex items-center justify-center mb-6">
+        <a href="https://github.com/" class="mr-4">
+          <img src="../images/git-removebg-preview.png" style="height: 30px" />
+        </a>
+        <a href="https://www.youtube.com/" class="mr-4">
+          <img
+            src="../images/youtube-removebg-preview.png"
+            style="height: 35px"
+          />
+        </a>
+      </div>
+      <button
+        class="bg-black text-white font-semibold py-3 px-6 rounded hover:bg-indigo-600 border border-white w-4/5 md:w-1/2"
+      >
+        View Profile
+      </button>
+    </section>
+
+    <section class="bg-green-100 py-20 text-center font-semibold">
+      <h1 class="font-serif text-5xl mb-4">Contact</h1>
+      <p class="font-serif text-2xl font-normal">Gujrat, Pakistan</p>
+      <p class="font-serif text-2xl font-normal">(+92) 313-5369068</p>
+      <p class="font-serif text-2xl font-normal mb-4">
+        muhammad.abobakar@uog.edu.pk
+      </p>
+      <div class="flex items-center justify-center">
+        <a href="#" class="mr-4">
+          <img src="../images/git-removebg-preview.png" style="height: 30px" />
+        </a>
+        <a href="https://www.youtube.com/" class="mr-4">
+          <img
+            src="../images/youtube-removebg-preview.png"
+            style="height: 35px"
+          />
+        </a>
+      </div>
+    </section>
+
+    <section class="text-center bg-gray-900 py-8">
+      <img
+        class="mb-4 mx-auto"
+        src="../images/edu.png"
+        alt="edu2skill logo"
+        style="max-width: 200px; height: auto"
+      />
+      <a class="text-white text-2xl" href="index.html"
+        >edu2skill.wordpress.com</a
+      >
+    </section>
+  </body>
+
+  <!-- For the Menu button -->
+  <script>
+    const toggleBtn = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggleBtn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</html>
