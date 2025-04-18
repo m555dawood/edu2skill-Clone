@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tailwind.css" />
+    <title>edu2skill | Abo Bakar</title>
+    <link rel="icon" href="../images/logo.png " />
+  </head>
+  <body>
+    <nav class="bg-gray-900 px-4 py-3 relative">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="text-white text-lg font-semibold"
+          >edu2skill</a
+        >
+
+        <button
+          id="menu-toggle"
+          class="text-white md:hidden focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <div class="hidden md:flex md:items-center">
+          <a
+            href="courses.html"
+            class="text-white text-lg font-semibold hover:text-gray-300"
+            >Courses</a
+          >
+        </div>
+      </div>
+
+      <div
+        id="menu"
+        class="absolute left-4 mt-2 hidden md:hidden bg-gray-800 rounded shadow-md w-40 z-50"
+      >
+        <a
+          href="courses.html"
+          class="block px-4 py-2 text-white text-lg hover:bg-gray-700 rounded"
+          >Courses</a
+        >
+      </div>
+    </nav>
+
+    <section class="bg-green-100 py-8">
+      <h1
+        id="dynamic-heading-1"
+        class="text-3xl md:text-5xl font-bold text-gray-800 font-serif text-center"
+      >
+        Empowering your Career through
+      </h1>
+      <h1
+        id="dynamic-heading-2"
+        class="text-3xl md:text-5xl font-bold text-gray-800 font-serif text-center"
+      >
+        skill Development
+      </h1>
+
+      <div
+        class="flex flex-col md:flex-row justify-between items-center mt-4 px-4 md:px-10 lg:px-40"
+      >
+        <div>
+          <img src="../images/edu.png" alt="Edu Logo" style="height: 50px" />
+        </div>
+        <div class="flex items-center mt-4 md:mt-0">
+          <a href="https://github.com/" class="mr-4">
+            <img
+              src="../images/git-removebg-preview.png"
+              style="height: 30px"
+            />
+          </a>
+          <a href="https://www.youtube.com/" class="mr-4">
+            <img
+              src="../images/youtube-removebg-preview.png"
+              style="height: 35px"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-cover bg-fixed bg-center"
+      style="
+        background-image: url('../images/poster.png');
+        background-blend-mode: multiply;
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 90vh;
+      "
+    >
+      <div
+        class="flex flex-col justify-center items-center text-center text-white h-full px-4"
+      >
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
+          Your Gateway to IT &
+        </h1>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          Programming Mastery
+        </h1>
+        <p class="text-base md:text-lg leading-relaxed mb-8 max-w-4xl">
+          Are you ready to enhance your IT and programming skills? At edu2skill,
+          we offer comprehensive tutorials to help you learn and grow. Whether
+          you’re a beginner or an experienced developer, our tutorials provide
+          step-by-step guidance to make learning easy and efficient.
+        </p>
+        <button
+          class="bg-black text-indigo-600 font-semibold py-3 px-6 rounded hover:bg-indigo-100 border border-white"
+        >
+          Start Learning
+        </button>
+      </div>
+    </section>
+
+    <section class="bg-green-100 py-20">
+      <h1
+        class="text-3xl md:text-4xl font-bold text-gray-800 mb-10 text-center md:text-left px-4 md:px-10 lg:px-40"
+      >
+        Easy-to-Follow Tutorials
+      </h1>
+      <div
+        class="flex flex-col md:flex-row items-center px-4 md:px-10 lg:px-40"
+      >
+        <div class="w-full md:w-1/2 md:mr-8">
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
+            Our Tutorials are designed to simplify learning, making complex
+            topics approachable for beginners and professionals alike. With
+            step-by-step explanations, clear examples, and practical exercises,
+            you’ll quickly grasp key concepts.
+          </p>
+          <a href="courses.html">
+            <button
+              class="bg-black text-white font-semibold py-3 px-6 rounded hover:bg-indigo-600 border border-white"
+            >
+              Start Learning
+            </button>
+          </a>
+        </div>
+        <img
+          src="../images/1l.png"
+          alt="Tutorial Image"
+          class="w-full md:w-1/2 rounded-lg shadow-md mt-6 md:mt-0 zoom-image"
+        />
+      </div>
+
+      <h1
+        class="text-3xl md:text-4xl font-bold text-gray-800 mb-10 mt-24 text-center md:text-left px-4 md:px-10 lg:px-40"
+      >
+        Project-Based Learning
+      </h1>
+      <div
+        class="flex flex-col md:flex-row items-center px-4 md:px-10 lg:px-40"
+      >
+        <img
+          src="../images/2l.png"
+          alt="Project Image"
+          class="w-full md:w-1/2 rounded-lg shadow-md md:mr-8 mb-6 md:mb-0 zoom-image"
+        />
+        <div class="w-full md:w-1/2">
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
+            Learn by doing with projects that reinforce concepts and improve
+            your portfolio. From beginner to advanced projects, get hands-on
+            experience that builds your confidence and skillset.
+          </p>
+          <a href="project_l.html">
+            <button
+              class="bg-black text-white font-semibold py-3 px-6 rounded hover:bg-indigo-600 border border-white"
+            >
+              Start Learning
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <h1
+        class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 mt-24 text-center md:text-left px-4 md:px-10 lg:px-40"
+      >
+        Ideas for more Projects to
+      </h1>
+      <h1
+        class="text-3xl md:text-4xl font-bold text-gray-800 mb-10 text-center md:text-left px-4 md:px-10 lg:px-40"
+      >
+        Sharpen Your Skills
+      </h1>
+      <div
+        class="flex flex-col md:flex-row items-center px-4 md:px-10 lg:px-40"
+      >
+        <div class="w-full md:w-1/2 md:mr-8">
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
+            Explore real-world project ideas to enhance your development skills.
+            Whether you're building simple tools or full applications, these
+            projects help apply what you’ve learned.
+          </p>
+          <a href="project_l.html">
+            <button
+              class="bg-black text-white font-semibold py-3 px-6 rounded hover:bg-indigo-600 border border-white"
+            >
+              Explore More
+            </button>
+          </a>
+        </div>
+        <img
+          src="../images/3l.png"
+          alt="Project Ideas"
+          class="w-full md:w-1/2 rounded-lg shadow-md mt-6 md:mt-0 zoom-image"
+        />
+      </div>
+    </section>
+
+    <section class="bg-gray-900 py-20 text-white text-center">
+      <h4 class="font-serif text-2xl">Writer</h4>
+      <h1 class="font-serif text-5xl mb-6">Abo Bakar</h1>
+      <div class="flex items-center justify-center mb-6">
+        <a href="https://github.com/" class="mr-4">
+          <img src="../images/git-removebg-preview.png" style="height: 30px" />
+        </a>
+        <a href="https://www.youtube.com/" class="mr-4">
+          <img
+            src="../images/youtube-removebg-preview.png"
+            style="height: 35px"
+          />
+        </a>
+      </div>
+      <button
+        class="bg-black text-white font-semibold py-3 px-6 rounded hover:bg-indigo-600 border border-white w-4/5 md:w-1/2"
+      >
+        View Profile
+      </button>
+    </section>
+
+    <section class="bg-green-100 py-20 text-center font-semibold">
+      <h1 class="font-serif text-5xl mb-4">Contact</h1>
+      <p class="font-serif text-2xl font-normal">Gujrat, Pakistan</p>
+      <p class="font-serif text-2xl font-normal">(+92) 313-5369068</p>
+      <p class="font-serif text-2xl font-normal mb-4">
+        muhammad.abobakar@uog.edu.pk
+      </p>
+      <div class="flex items-center justify-center">
+        <a href="#" class="mr-4">
+          <img src="../images/git-removebg-preview.png" style="height: 30px" />
+        </a>
+        <a href="https://www.youtube.com/" class="mr-4">
+          <img
+            src="../images/youtube-removebg-preview.png"
+            style="height: 35px"
+          />
+        </a>
+      </div>
+    </section>
+
+    <section class="text-center bg-gray-900 py-8">
+      <img
+        class="mb-4 mx-auto"
+        src="../images/edu.png"
+        alt="edu2skill logo"
+        style="max-width: 200px; height: auto"
+      />
+      <a class="text-white text-2xl" href="index.html"
+        >edu2skill.wordpress.com</a
+      >
+    </section>
+
+    <button
+      id="scrollToTopBtn"
+      class="fixed bottom-4 right-4 bg-indigo-600 text-white w-10 h-10 rounded-full flex items-center justify-center cursor-pointer z-50 opacity-0 transition-opacity duration-300"
+      title="Go to top"
+    >
+      <svg
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        class="w-6 h-6"
+      >
+        <path d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+      </svg>
+    </button>
+
+    <script>
+      // Existing scripts...
+    
+      // 1st for Menu Toggle Script
+      const toggleBtn = document.getElementById("menu-toggle");
+      const menu = document.getElementById("menu");
+    
+      toggleBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    
+      // 2nd for Headings Change Script
+      const heading1 = document.getElementById("dynamic-heading-1");
+      const heading2 = document.getElementById("dynamic-heading-2");
+      const headings = [
+        "Empowering your Career through",
+        "Skill Development",
+        "Start your Journey Today",
+      ];
+    
+      let index = 0;
+      setInterval(() => {
+        heading1.textContent = headings[index % headings.length];
+        heading2.textContent = headings[(index + 1) % headings.length];
+        index = (index + 1) % headings.length;
+      }, 5000);
+    
+      // 3rd for Zoom Effect on Images
+      const images = document.querySelectorAll(".zoom-image");
+    
+      images.forEach((image) => {
+        image.addEventListener("mouseover", () => {
+          image.style.transition = "transform 0.3s ease";
+          image.style.transform = "scale(1.05)";
+        });
+    
+        image.addEventListener("mouseout", () => {
+          image.style.transition = "transform 0.3s ease";
+          image.style.transform = "scale(1)";
+        });
+      });
+    
+      // 4th for Scroll to Top Button
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollToTopBtn.classList.remove("opacity-0");
+        } else {
+          scrollToTopBtn.classList.add("opacity-0");
+        }
+      });
+    
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    
+      // Additional 6 functions:
+    
+      // 5th: Dark Mode Toggle
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+      }
+      // Example usage: call toggleDarkMode() on a button click
+    
+      // 6th: Simple Form Validation Example
+      function validateEmailForm(emailInputId) {
+        const emailInput = document.getElementById(emailInputId);
+        const email = emailInput.value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert("Please enter a valid email address.");
+          emailInput.focus();
+          return false;
+        }
+        return true;
+      }
+    
+      // 7th: Smooth Scroll for Anchor Links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+    
+      // 8th: Dynamic Current Year Display
+      function displayCurrentYear(elementId) {
+        const el = document.getElementById(elementId);
+        if (el) {
+          el.textContent = new Date().getFullYear();
+        }
+      }
+      // Example usage: displayCurrentYear("year-span");
+    
+      // 9th: Lazy Loading Images
+      document.addEventListener("DOMContentLoaded", () => {
+        const lazyImages = document.querySelectorAll("img.lazy");
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove("lazy");
+                observer.unobserve(img);
+              }
+            });
+          });
+          lazyImages.forEach(img => observer.observe(img));
+        } else {
+          // Fallback: load all images immediately
+          lazyImages.forEach(img => {
+            img.src = img.dataset.src;
+            img.classList.remove("lazy");
+          });
+        }
+      });
+    
+      // 10th: Simple Notification Popup
+      function showNotification(message, duration = 3000) {
+        const notification = document.createElement("div");
+        notification.textContent = message;
+        notification.style.position = "fixed";
+        notification.style.bottom = "20px";
+        notification.style.right = "20px";
+        notification.style.backgroundColor = "#333";
+        notification.style.color = "#fff";
+        notification.style.padding = "10px 20px";
+        notification.style.borderRadius = "5px";
+        notification.style.zIndex = "1000";
+        notification.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
+        document.body.appendChild(notification);
+        setTimeout(() => {
+          notification.remove();
+        }, duration);
+      }
+    
+    </script>
+  </body>
+</html>
