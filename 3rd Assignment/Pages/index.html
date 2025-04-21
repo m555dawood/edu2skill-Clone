@@ -6,6 +6,36 @@
     <link rel="stylesheet" href="tailwind.css" />
     <title>edu2skill | Abo Bakar</title>
     <link rel="icon" href="../images/logo.png " />
+    <style>
+      /* Add zoom effect styles */
+      .zoom-image {
+        transition: transform 0.3s ease;
+      }
+      .zoom-image:hover {
+        transform: scale(1.05);
+      }
+      
+      /* Dark mode styles */
+      .dark-mode {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+      }
+      .dark-mode .bg-green-100 {
+        background-color: #2a2a2a !important;
+      }
+      .dark-mode .text-gray-800 {
+        color: #ffffff !important;
+      }
+      .dark-mode .bg-gray-900 {
+        background-color: #000000 !important;
+      }
+      .dark-mode .text-gray-700 {
+        color: #ffffff !important;
+      }
+      .dark-mode img {
+        filter: brightness(0.9);
+      }
+    </style>
   </head>
   <body>
     <nav class="bg-gray-900 px-4 py-3 relative">
@@ -39,6 +69,13 @@
             class="text-white text-lg font-semibold hover:text-gray-300"
             >Courses</a
           >
+          <button
+            id="darkModeBtn"
+            class="ml-6 text-white p-2 rounded-full hover:bg-gray-700 focus:outline-none"
+            onclick="toggleDarkMode()"
+          >
+            🌙
+          </button>
         </div>
       </div>
 
@@ -271,6 +308,7 @@
       >
     </section>
 
+    <!-- Scroll to Top Button -->
     <button
       id="scrollToTopBtn"
       class="fixed bottom-4 right-4 bg-indigo-600 text-white w-10 h-10 rounded-full flex items-center justify-center cursor-pointer z-50 opacity-0 transition-opacity duration-300"
@@ -290,149 +328,193 @@
     </button>
 
     <script>
-      // Existing scripts...
-    
-      // 1st for Menu Toggle Script
-      const toggleBtn = document.getElementById("menu-toggle");
-      const menu = document.getElementById("menu");
-    
-      toggleBtn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    
-      // 2nd for Headings Change Script
-      const heading1 = document.getElementById("dynamic-heading-1");
-      const heading2 = document.getElementById("dynamic-heading-2");
-      const headings = [
-        "Empowering your Career through",
-        "Skill Development",
-        "Start your Journey Today",
-      ];
-    
-      let index = 0;
-      setInterval(() => {
-        heading1.textContent = headings[index % headings.length];
-        heading2.textContent = headings[(index + 1) % headings.length];
-        index = (index + 1) % headings.length;
-      }, 5000);
-    
-      // 3rd for Zoom Effect on Images
-      const images = document.querySelectorAll(".zoom-image");
-    
-      images.forEach((image) => {
-        image.addEventListener("mouseover", () => {
-          image.style.transition = "transform 0.3s ease";
-          image.style.transform = "scale(1.05)";
+      // 1st: Menu Toggle Script - Working
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("menu");
+      
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
         });
-    
-        image.addEventListener("mouseout", () => {
-          image.style.transition = "transform 0.3s ease";
-          image.style.transform = "scale(1)";
-        });
-      });
-    
-      // 4th for Scroll to Top Button
-      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          scrollToTopBtn.classList.remove("opacity-0");
-        } else {
-          scrollToTopBtn.classList.add("opacity-0");
+      }
+
+      // 2nd: Headings Change Script - Fixed
+      function initializeHeadingChange() {
+        const heading1 = document.getElementById("dynamic-heading-1");
+        const heading2 = document.getElementById("dynamic-heading-2");
+        
+        if (heading1 && heading2) {
+          const headings = [
+            "Empowering your Career through",
+            "Skill Development",
+            "Start your Journey Today",
+          ];
+          
+          let index = 0;
+          setInterval(() => {
+            heading1.textContent = headings[index % headings.length];
+            heading2.textContent = headings[(index + 1) % headings.length];
+            index = (index + 1) % headings.length;
+          }, 3000);
         }
-      });
-    
-      scrollToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
+      }
+
+      // 3rd: Zoom Effect on Images - Fixed
+      function initializeZoomEffect() {
+        const images = document.querySelectorAll(".zoom-image");
+        images.forEach((image) => {
+          image.addEventListener("mouseover", () => {
+            image.style.transition = "transform 0.3s ease";
+            image.style.transform = "scale(1.05)";
+          });
+
+          image.addEventListener("mouseout", () => {
+            image.style.transition = "transform 0.3s ease";
+            image.style.transform = "scale(1)";
+          });
         });
-      });
-    
-      // Additional 6 functions:
-    
-      // 5th: Dark Mode Toggle
+      }
+
+      // Initialize 2nd and 3rd functions immediately
+      initializeHeadingChange();
+      initializeZoomEffect();
+
+      // Dark Mode Toggle Function - Fixed
       function toggleDarkMode() {
         document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+        showNotification(isDark ? "Dark mode enabled" : "Light mode enabled");
       }
-      // Example usage: call toggleDarkMode() on a button click
-    
-      // 6th: Simple Form Validation Example
+
+      // Notification Function
+      function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.textContent = message;
+        notification.style.cssText = `
+          position: fixed;
+          top: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: ${type === 'error' ? '#ff4444' : '#333'};
+          color: white;
+          padding: 12px 24px;
+          border-radius: 4px;
+          z-index: 1001;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          opacity: 1;
+          transition: opacity 0.5s ease;
+        `;
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+          notification.style.opacity = '0';
+          setTimeout(() => notification.remove(), 500);
+        }, 3000);
+      }
+
+      // Initialize all functions when the page loads
+      document.addEventListener('DOMContentLoaded', () => {
+        // 4th: Scroll to Top Button
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        if (scrollToTopBtn) {
+          window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+              scrollToTopBtn.classList.remove("opacity-0");
+            } else {
+              scrollToTopBtn.classList.add("opacity-0");
+            }
+          });
+
+          scrollToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          });
+        }
+
+        // 5th: Email Form
+        const emailForm = document.createElement('form');
+        emailForm.innerHTML = `
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <input type="email" id="testEmail" placeholder="Test email validation" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 200px;">
+            <button type="submit" style="padding: 8px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Validate Email</button>
+          </div>
+        `;
+        emailForm.style.cssText = 'position: fixed; bottom: 80px; right: 20px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000;';
+        emailForm.onsubmit = (e) => {
+          e.preventDefault();
+          validateEmailForm('testEmail');
+        };
+        document.body.appendChild(emailForm);
+
+        // 8th: Year Display
+        const yearDisplay = document.createElement('div');
+        yearDisplay.id = 'currentYear';
+        yearDisplay.style.cssText = 'position: fixed; bottom: 20px; right: 20px; background: #333; color: white; padding: 8px 15px; border-radius: 4px; z-index: 1000;';
+        document.body.appendChild(yearDisplay);
+        yearDisplay.textContent = new Date().getFullYear();
+
+        // Show welcome message
+        setTimeout(() => {
+          showNotification('Welcome to edu2skill! Try out our features! ');
+        }, 1000);
+      });
+
+      // Function definitions
       function validateEmailForm(emailInputId) {
         const emailInput = document.getElementById(emailInputId);
+        if (!emailInput) return false;
+        
         const email = emailInput.value;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
         if (!emailRegex.test(email)) {
-          alert("Please enter a valid email address.");
+          showNotification("Please enter a valid email address", "error");
           emailInput.focus();
           return false;
         }
+        
+        showNotification("Email is valid!");
         return true;
       }
-    
-      // 7th: Smooth Scroll for Anchor Links
+
+      // 7th: Smooth Scroll
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
+        anchor.addEventListener('click', function (e) {
           e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+            showNotification('Scrolling to section');
           }
         });
       });
-    
-      // 8th: Dynamic Current Year Display
-      function displayCurrentYear(elementId) {
-        const el = document.getElementById(elementId);
-        if (el) {
-          el.textContent = new Date().getFullYear();
-        }
-      }
-      // Example usage: displayCurrentYear("year-span");
-    
-      // 9th: Lazy Loading Images
-      document.addEventListener("DOMContentLoaded", () => {
-        const lazyImages = document.querySelectorAll("img.lazy");
-        if ("IntersectionObserver" in window) {
-          const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                const img = entry.target;
+
+      // 9th: Lazy Loading
+      if ('IntersectionObserver' in window) {
+        const lazyImageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              if (img.dataset.src) {
                 img.src = img.dataset.src;
-                img.classList.remove("lazy");
+                img.classList.remove('lazy');
                 observer.unobserve(img);
+                showNotification('Image loaded');
               }
-            });
+            }
           });
-          lazyImages.forEach(img => observer.observe(img));
-        } else {
-          // Fallback: load all images immediately
-          lazyImages.forEach(img => {
-            img.src = img.dataset.src;
-            img.classList.remove("lazy");
-          });
-        }
-      });
-    
-      // 10th: Simple Notification Popup
-      function showNotification(message, duration = 3000) {
-        const notification = document.createElement("div");
-        notification.textContent = message;
-        notification.style.position = "fixed";
-        notification.style.bottom = "20px";
-        notification.style.right = "20px";
-        notification.style.backgroundColor = "#333";
-        notification.style.color = "#fff";
-        notification.style.padding = "10px 20px";
-        notification.style.borderRadius = "5px";
-        notification.style.zIndex = "1000";
-        notification.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
-        document.body.appendChild(notification);
-        setTimeout(() => {
-          notification.remove();
-        }, duration);
+        });
+
+        document.querySelectorAll('img[data-src]').forEach(img => {
+          lazyImageObserver.observe(img);
+        });
       }
-    
     </script>
   </body>
 </html>
